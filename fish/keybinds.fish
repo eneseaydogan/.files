@@ -1,0 +1,1 @@
+/home/eydgn/.files/keybinds/fish-keybinds.fish

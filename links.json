@@ -1,0 +1,146 @@
+[
+  {
+    "type": "dir",
+    "src": "bat",
+    "dst": "bat"
+  },
+  {
+    "type": "dir",
+    "src": "btop",
+    "dst": "btop"
+  },
+  {
+    "type": "dir",
+    "src": "kitty",
+    "dst": "kitty"
+  },
+  {
+    "type": "dir",
+    "src": "mako",
+    "dst": "mako"
+  },
+  {
+    "type": "dir",
+    "src": "mango",
+    "dst": "mango"
+  },
+  {
+    "type": "dir",
+    "src": "nvim",
+    "dst": "nvim"
+  },
+  {
+    "type": "dir",
+    "src": "rofi",
+    "dst": "rofi"
+  },
+  {
+    "type": "dir",
+    "src": "waybar",
+    "dst": "waybar"
+  },
+  {
+    "type": "dir",
+    "src": "yazi",
+    "dst": "yazi"
+  },
+  {
+    "type": "dir",
+    "src": "qmk",
+    "dst": "qmk"
+  },
+  {
+    "type": "dir",
+    "src": "eza",
+    "dst": "eza"
+  },
+  {
+    "type": "dir",
+    "src": "fish",
+    "dst": "fish"
+  },
+  {
+    "type": "dir",
+    "src": "zathura",
+    "dst": "zathura"
+  },
+  {
+    "type": "dir",
+    "src": "bin",
+    "dst": ".bin",
+    "root": "home"
+  },
+  {
+    "type": "file",
+    "src": "opencode/opencode.jsonc",
+    "dst": "opencode/opencode.jsonc"
+  },
+  {
+    "type": "file",
+    "src": "keybinds/fish-keybinds.fish",
+    "dst": "fish/keybinds.fish"
+  },
+  {
+    "type": "file",
+    "src": "keybinds/kitty-keybinds.conf",
+    "dst": "kitty/keybinds.conf"
+  },
+  {
+    "type": "file",
+    "src": "keybinds/mango-keybinds.conf",
+    "dst": "mango/keybinds.conf"
+  },
+  {
+    "type": "file",
+    "src": "keybinds/neovim-keybinds.lua",
+    "dst": "nvim/lua/keybinds.lua"
+  },
+  {
+    "type": "file",
+    "src": "gtk-4.0/settings.ini",
+    "dst": "gtk-4.0/settings.ini"
+  },
+  {
+    "type": "file",
+    "src": "gtk-3.0/settings.ini",
+    "dst": "gtk-3.0/settings.ini"
+  },
+  {
+    "type": "dir",
+    "src": "fontconfig",
+    "dst": "fontconfig"
+  },
+  {
+    "type": "dir",
+    "src": "qt6ct",
+    "dst": "qt6ct"
+  },
+  {
+    "type": "file",
+    "src": ".bashrc",
+    "dst": ".bashrc",
+    "root": "home"
+  },
+  {
+    "type": "file",
+    "src": ".bash_profile",
+    "dst": ".bash_profile",
+    "root": "home"
+  },
+  {
+    "type": "file",
+    "src": "gitconfig",
+    "dst": ".gitconfig",
+    "root": "home"
+  },
+  {
+    "type": "dir",
+    "src": "delta",
+    "dst": "delta"
+  },
+  {
+    "type": "dir",
+    "src": "mpv",
+    "dst": "mpv"
+  }
+]

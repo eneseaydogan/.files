@@ -1,0 +1,22 @@
+{
+    "output": ["HDMI-A-1"],
+    "layer": "top",
+    "position": "top",
+    "spacing": 0,
+    "modules-left": [
+        "ext/workspaces"
+    ],
+    "modules-center": [],
+    "modules-right": [],
+
+    "ext/workspaces": {
+        "disable-scroll": true,
+        "sort-by-id": true,
+        "format": "{icon}",
+        "format-icons": {
+            "urgent": ""
+        },
+        "on-click": "activate",
+        "on-click-right": "deactivate"
+    }
+}

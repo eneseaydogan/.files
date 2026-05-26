@@ -1,0 +1,24 @@
+- [X] mangowm
+- [X] kitty:
+- [ ] fish:
+    - [ ] fzf
+    - [ ] keybindings
+    - [ ] useful functions and scripts
+- [ ] neovim:
+    - [ ] try to drop lspconfig
+    - [ ] improve blink.cmp
+    - [ ] improved treesitter functionality
+    - [ ] better/faster pairs ? blink ?
+    - [ ] fzf-lua (replace or configure it)
+- [ ] find an extension to use firefox with only keybeard and learn it
+- [ ] qmk:
+    - [ ] install your config
+    - [ ] give it it's current shape
+- [ ] ssh/gpg/secrets management
+- [ ] yazi:
+    - [ ] configure
+    - [ ] keybindings
+    - [ ] extensions
+- [ ] mpv:
+    - [ ] settings
+    - [ ] scripts/plugis

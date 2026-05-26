@@ -1,0 +1,17 @@
+# Private configs (name, email, signing key)
+gitconfig-local
+
+# Private environment variables (location, secrets)
+private-env
+
+# Backups created by the dot tool
+.backups/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Wallpaper images (large binaries)
+*.png
+*.jpg
+*.jpeg
