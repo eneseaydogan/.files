@@ -10,7 +10,7 @@ vim.o.sidescrolloff = 8
 vim.o.wrap = false
 vim.o.termguicolors = true
 
-vim.o.showtabline = 0
+vim.o.showtabline = 1
 
 vim.o.foldmethod = "expr"
 vim.o.foldexpr = "v:lua.vim.treesitter.foldexpr()"

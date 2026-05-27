@@ -1,5 +1,4 @@
 local gh = function(x) return "https://github.com/" .. x end
--- local cb = function(x) return "https://codeberg.org/" .. x end
 
 vim.pack.add({
     gh("nvim-lua/plenary.nvim"),
@@ -344,3 +343,28 @@ require("mkdnflow").setup({
 require("trouble").setup({
     focus = true,
 })
+
+vim.keymap.set("n", "<leader>gg", function()
+    vim.pack.add({
+        gh("NeogitOrg/neogit"),
+        gh("sindrets/diffview.nvim"),
+        gh("esmuellert/codediff.nvim"),
+        gh("m00qek/baleia.nvim"),
+    })
+    require("neogit").setup({
+        integrations = {
+            fzf_lua = true,
+            diffview = true,
+        },
+        diff_viewer = "diffview",
+        graph_style = "kitty",
+        kind = "tab",
+        signs = {
+            item = { "", "" },
+            section = { "", "" },
+        },
+    })
+    vim.cmd("Neogit")
+    -- Replace the keymap with the direct version after first load
+    vim.keymap.set("n", "<leader>gg", "<cmd>Neogit<CR>", { desc = "Neogit" })
+end, { desc = "Neogit" })

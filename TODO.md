@@ -4,12 +4,13 @@
     - [ ] fzf
     - [ ] keybindings
     - [ ] useful functions and scripts
-- [ ] neovim:
+- [-] neovim:
     - [ ] try to drop lspconfig
     - [ ] improve blink.cmp
     - [ ] improved treesitter functionality
     - [ ] better/faster pairs ? blink ?
-    - [ ] fzf-lua (replace or configure it)
+    - [ ] fzf-lua configure
+    - [X] neogit
 - [ ] find an extension to use firefox with only keybeard and learn it
 - [ ] qmk:
     - [ ] install your config
