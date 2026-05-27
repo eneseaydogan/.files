@@ -2,7 +2,7 @@
 gitconfig-local
 
 # Private environment variables (location, secrets)
-private-env
+mango/private.conf
 
 # Backups created by the dot tool
 .backups/
