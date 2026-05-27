@@ -152,91 +152,54 @@ map(
     { desc = "Format buffer" }
 )
 
--- fzf-lua
+-- snacks picker
 
-map(
-    "n",
-    "<A-o>",
-    function() require("fzf-lua").files({ hidden = false }) end,
-    { desc = "Find files" }
-)
-map(
-    "n",
-    "<A-S-o>",
-    function() require("fzf-lua").files({ hidden = true }) end,
-    { desc = "Find files (hidden)" }
-)
-map(
-    "n",
-    "<leader>s",
-    function() require("fzf-lua").lsp_document_symbols() end,
-    { desc = "Document symbols" }
-)
-map(
-    "n",
-    "<leader>S",
-    function() require("fzf-lua").lsp_workspace_symbols() end,
-    { desc = "Workspace symbols" }
-)
-map("n", "<A-b>", function() require("fzf-lua").buffers() end, { desc = "Buffers" })
-map("n", "<A-g>", function() require("fzf-lua").live_grep() end, { desc = "Live grep" })
-map(
-    "n",
-    "<leader>dd",
-    function() require("fzf-lua").diagnostics_document() end,
-    { desc = "Document diagnostics" }
-)
-map(
-    "n",
-    "<leader>dw",
-    function() require("fzf-lua").diagnostics_workspace() end,
-    { desc = "Workspace diagnostics" }
-)
-map("n", "<S-z>", function() require("fzf-lua").zoxide() end, { desc = "Zoxide" })
-map("n", "<A-r>", function() require("fzf-lua").oldfiles() end, { desc = "Recent files" })
-map(
-    "n",
-    "gr",
-    function() require("fzf-lua").lsp_references() end,
-    { desc = "References" }
-)
-map(
-    "n",
-    "gd",
-    function() require("fzf-lua").lsp_definitions() end,
-    { desc = "Goto definition" }
-)
-map(
-    "n",
-    "<leader>*",
-    function() require("fzf-lua").grep_cword() end,
-    { desc = "Grep word under cursor" }
-)
-map(
-    "n",
-    "<leader>/",
-    function() require("fzf-lua").blines() end,
-    { desc = "Buffer lines" }
-)
-map(
-    "n",
-    "<leader>gs",
-    function() require("fzf-lua").git_status() end,
-    { desc = "Git status" }
-)
-map(
-    "n",
-    "<leader>gc",
-    function() require("fzf-lua").git_commits() end,
-    { desc = "Git commits" }
-)
-map("n", "<leader>fk", function() require("fzf-lua").keymaps() end, { desc = "Keymaps" })
-map(
-    "n",
-    "<leader>fh",
-    function() require("fzf-lua").help_tags() end,
-    { desc = "Help tags" }
-)
+-- General
+map("n", "<leader><space>", function() Snacks.picker.smart() end, { desc = "Smart find files" })
+map("n", "<leader>ff", function() Snacks.picker.files() end, { desc = "Find files" })
+map("n", "<A-o>", function() Snacks.picker.files() end, { desc = "Find files" })
+map("n", "<A-S-o>", function() Snacks.picker.files({ hidden = true }) end, { desc = "Find files (hidden)" })
+map("n", "<A-b>", function() Snacks.picker.buffers() end, { desc = "Buffers" })
+map("n", "<A-g>", function() Snacks.picker.grep() end, { desc = "Live grep" })
+map("n", "<A-r>", function() Snacks.picker.recent() end, { desc = "Recent files" })
+map("n", "<S-z>", function() Snacks.picker.zoxide() end, { desc = "Zoxide" })
+map("n", "<leader>/", function() Snacks.picker.lines() end, { desc = "Buffer lines" })
+map({ "n", "x" }, "<leader>*", function() Snacks.picker.grep_word() end, { desc = "Grep word/selection" })
+
+-- Git
+map("n", "<leader>gs", function() Snacks.picker.git_status() end, { desc = "Git status" })
+map("n", "<leader>gc", function() Snacks.picker.git_log() end, { desc = "Git log" })
+map("n", "<leader>gb", function() Snacks.picker.git_branches() end, { desc = "Git branches" })
+map("n", "<leader>gL", function() Snacks.picker.git_log_line() end, { desc = "Git log line" })
+map("n", "<leader>gd", function() Snacks.picker.git_diff() end, { desc = "Git diff (hunks)" })
+map("n", "<leader>gS", function() Snacks.picker.git_stash() end, { desc = "Git stash" })
+map("n", "<leader>gf", function() Snacks.picker.git_log_file() end, { desc = "Git log file" })
+
+-- LSP
+map("n", "gd", function() Snacks.picker.lsp_definitions() end, { desc = "Goto definition" })
+map("n", "gD", function() Snacks.picker.lsp_declarations() end, { desc = "Goto declaration" })
+map("n", "gr", function() Snacks.picker.lsp_references() end, { nowait = true, desc = "References" })
+map("n", "gI", function() Snacks.picker.lsp_implementations() end, { desc = "Goto implementation" })
+map("n", "gy", function() Snacks.picker.lsp_type_definitions() end, { desc = "Goto type definition" })
+map("n", "<leader>s", function() Snacks.picker.lsp_symbols() end, { desc = "Document symbols" })
+map("n", "<leader>S", function() Snacks.picker.lsp_workspace_symbols() end, { desc = "Workspace symbols" })
+
+-- Diagnostics
+map("n", "<leader>dd", function() Snacks.picker.diagnostics_buffer() end, { desc = "Buffer diagnostics" })
+map("n", "<leader>dw", function() Snacks.picker.diagnostics() end, { desc = "Workspace diagnostics" })
+
+-- Search
+map("n", "<leader>sc", function() Snacks.picker.command_history() end, { desc = "Command history" })
+map("n", "<leader>sC", function() Snacks.picker.commands() end, { desc = "Commands" })
+map("n", "<leader>sm", function() Snacks.picker.marks() end, { desc = "Marks" })
+map("n", "<leader>sj", function() Snacks.picker.jumps() end, { desc = "Jumps" })
+map("n", "<leader>sq", function() Snacks.picker.qflist() end, { desc = "Quickfix list" })
+map("n", "<leader>su", function() Snacks.picker.undo() end, { desc = "Undo history" })
+map("n", "<leader>sR", function() Snacks.picker.resume() end, { desc = "Resume picker" })
+
+-- Misc
+map("n", "<leader>fk", function() Snacks.picker.keymaps() end, { desc = "Keymaps" })
+map("n", "<leader>fh", function() Snacks.picker.help() end, { desc = "Help pages" })
 
 -- gitsigns
 

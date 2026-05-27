@@ -10,8 +10,7 @@ vim.pack.add({
     gh("saghen/blink.cmp"),
     gh("romus204/tree-sitter-manager.nvim"),
     gh("nvim-mini/mini.pairs"),
-    { src = "https://github.com/catppuccin/nvim", name = "catppuccin" },
-    gh("ibhagwan/fzf-lua"),
+    { src = gh("catppuccin/nvim"), name = "catppuccin" },
     gh("stevearc/conform.nvim"),
     gh("lewis6991/gitsigns.nvim"),
     { src = gh("ThePrimeagen/harpoon"), version = "harpoon2" },
@@ -20,6 +19,7 @@ vim.pack.add({
     gh("nvim-pack/nvim-spectre"),
     gh("folke/trouble.nvim"),
     gh("mrjones2014/smart-splits.nvim"),
+    gh("folke/snacks.nvim"),
 })
 
 require("catppuccin").setup({
@@ -111,6 +111,28 @@ vim.lsp.config("lua_ls", {
 vim.lsp.enable("lua_ls")
 vim.lsp.enable("fish_lsp")
 
+require("snacks").setup({
+    bigfile = { enabled = true },
+    dashboard = { enabled = false },
+    explorer = { enabled = false },
+    indent = {
+        enabled = true,
+        char = "▏",
+        scope = {
+            char = "▏",
+        },
+    },
+    input = { enabled = true },
+    picker = { enabled = true },
+    notifier = { enabled = true },
+    quickfile = { enabled = true },
+    scope = { enabled = true },
+    scroll = { enabled = false },
+    statuscolumn = { enabled = true },
+    words = { enabled = true },
+    gh = { enabled = true },
+})
+
 -- blink.cmp
 
 local cmp = require("blink.cmp")
@@ -197,18 +219,6 @@ require("tree-sitter-manager").setup({
     },
     auto_install = true,
 })
-
--- fzf-lua
-
-require("fzf-lua").setup({
-    "border-fused",
-    winopts = {
-        preview = {
-            horizontal = "right:75%",
-        },
-    },
-})
-require("fzf-lua").register_ui_select()
 
 -- conform
 
@@ -353,7 +363,7 @@ vim.keymap.set("n", "<leader>gg", function()
     })
     require("neogit").setup({
         integrations = {
-            fzf_lua = true,
+            snacks = true,
             diffview = true,
         },
         diff_viewer = "diffview",

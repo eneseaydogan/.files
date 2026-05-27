@@ -9,8 +9,9 @@
     - [ ] improve blink.cmp
     - [ ] improved treesitter functionality
     - [ ] better/faster pairs ? blink ?
-    - [ ] fzf-lua configure
     - [X] neogit
+    - [ ] explore snacks.nvim
+    - [ ] try to unify bars
 - [ ] find an extension to use firefox with only keybeard and learn it
 - [ ] qmk:
     - [ ] install your config
