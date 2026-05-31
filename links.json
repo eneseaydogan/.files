@@ -147,5 +147,10 @@
     "type": "dir",
     "src": "lazygit",
     "dst": "lazygit"
+  },
+  {
+    "type": "dir",
+    "src": "ghostty",
+    "dst": "ghostty"
   }
 ]

@@ -2,12 +2,12 @@
     "output": ["DP-1"],
     "layer": "top",
     "position": "top",
+    // "mode": "overlay",
     "spacing": 0,
     "modules-left": [
         "ext/workspaces"
     ],
     "modules-center": [
-        "clock"
     ],
     "modules-right": [
         "custom/prayerbar",
@@ -15,6 +15,7 @@
         "memory",
         "pulseaudio",
         "custom/weather",
+        "clock",
         "tray"
     ],
 
@@ -49,7 +50,7 @@
     "clock": {
         "interval": 60,
         "locale": "tr_TR.UTF8",
-        "format": "{:%d %B %A  %H:%M}",
+        "format": "{:%d %B %A, %H:%M}",
         "tooltip-format": "<tt><small>{calendar}</small></tt>",
         "calendar": {
             "mode": "year",
@@ -85,9 +86,9 @@
         "format": "{icon} {volume}%",
         "format-icons": {
             "default": ["", "", ""],
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
             "phone": "",
             "portable": "",
             "car": ""
