@@ -67,7 +67,7 @@
   {
     "type": "dir",
     "src": "bin",
-    "dst": ".bin",
+    "dst": ".local/bin",
     "root": "home"
   },
   {
