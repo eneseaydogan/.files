@@ -63,10 +63,10 @@ gdisk /dev/nvme0n1
 
 ### Layout
 
-| Partition | Size | Type Code | Mount |
-|---|---|---|---|
-| nvme0n1p1 | 1 GiB | EF00 | /boot/efi |
-| nvme0n1p2 | Remainder | 8300 | / |
+| Partition | Size      | Type Code | Mount     |
+| --------- | --------- | --------- | --------- |
+| nvme0n1p1 | 1 GiB     | EF00      | /boot/efi |
+| nvme0n1p2 | Remainder | 8300      | /         |
 
 > No separate swap — use swapfile or zram post-install.
 > **gdisk commands:** `n` = new, `t` = type, `w` = write
@@ -444,10 +444,12 @@ paru -S catppuccin-gtk-theme
 ```
 
 Config files (already in `.files/`):
+
 - `~/.config/gtk-3.0/settings.ini`
 - `~/.config/gtk-4.0/settings.ini`
 
 Env vars in `mango/env.conf`:
+
 ```
 env=GDK_BACKEND,wayland
 ```
@@ -459,6 +461,7 @@ pacman -S qt6ct
 ```
 
 Env vars in `mango/env.conf`:
+
 ```
 env=QT_QPA_PLATFORM,wayland
 env=QT_WAYLAND_DISABLE_WINDOWDECORATION,1
@@ -473,6 +476,7 @@ qt6ct
 ```
 
 In the GUI:
+
 1. **Appearance → Style**: `Fusion`
 2. **Appearance → Palette**: pick a color scheme (e.g. Catppuccin-Mocha-Blue)
 3. **Fonts**: set your preferred font and size
@@ -613,20 +617,20 @@ systemctl enable --user pipewire pipewire-pulse wireplumber mako syncthing
 
 ## Sections to review / customize
 
-| # | Section | Status |
-|---|---|---|---|---|
-| 0-3 | Boot, disks, fs, mount | Keep |
-| 4 | Mirrors + CachyOS | Keep |
-| 5 | Base install (no linux, no build deps) | Keep |
-| 6 | fstab (genfstab + manual edits) | Keep |
-| 7 | Download pre-built kernel from GitHub release | Keep |
-| 8-11 | Chroot, tz, hostname, users | Keep |
-| 12 | Install kernel (pacman -U, no build) | Keep |
-| 13 | systemd-networkd only (no DNS) | Keep |
-| 14 | UKI boot | Keep |
-| 15 | CPU/kernel tuning | Keep |
-| 16 | AMD GPU | Keep |
-| 17 | adios scheduler | Keep |
-| 18 | Qt/GTK Theming | Keep |
-| 19 | Exit & reboot | Keep |
-| 20 | Post-boot (paru, dotfiles, gpg/ssh/gopass, packages, services) | Keep |
+| #    | Section                                                        | Status |
+| ---- | -------------------------------------------------------------- | ------ |
+| 0-3  | Boot, disks, fs, mount                                         | Keep   |
+| 4    | Mirrors + CachyOS                                              | Keep   |
+| 5    | Base install (no linux, no build deps)                         | Keep   |
+| 6    | fstab (genfstab + manual edits)                                | Keep   |
+| 7    | Download pre-built kernel from GitHub release                  | Keep   |
+| 8-11 | Chroot, tz, hostname, users                                    | Keep   |
+| 12   | Install kernel (pacman -U, no build)                           | Keep   |
+| 13   | systemd-networkd only (no DNS)                                 | Keep   |
+| 14   | UKI boot                                                       | Keep   |
+| 15   | CPU/kernel tuning                                              | Keep   |
+| 16   | AMD GPU                                                        | Keep   |
+| 17   | adios scheduler                                                | Keep   |
+| 18   | Qt/GTK Theming                                                 | Keep   |
+| 19   | Exit & reboot                                                  | Keep   |
+| 20   | Post-boot (paru, dotfiles, gpg/ssh/gopass, packages, services) | Keep   |
