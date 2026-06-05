@@ -216,6 +216,9 @@ cmp.setup({
         },
     },
     cmdline = {
+        keymap = {
+            preset = "inherit",
+        },
         completion = {
             menu = { auto_show = true },
             ghost_text = { enabled = true },

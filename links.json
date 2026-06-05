@@ -152,5 +152,10 @@
     "type": "dir",
     "src": "ghostty",
     "dst": "ghostty"
+  },
+  {
+    "type": "dir",
+    "src": "surge",
+    "dst": "surge"
   }
 ]
