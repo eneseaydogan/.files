@@ -1,6 +1,6 @@
 configuration {
     show-icons: true;
-    font: "JetBrainsMono Nerd Font 12";
+    font: "JetBrainsMono Nerd Font 16";
 
     display-ssh:    "󰣀 ssh:";
     display-run:    "󱓞 run:";
